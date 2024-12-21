@@ -19,31 +19,34 @@
     </header>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" style="text-align: center; padding: 40px 20px;">
         <h2>Contact Us</h2>
         <p>If you have any questions or comments, please feel free to reach out to us using the form below:</p>
-        <form action="submit_form.php" method="post">
+        
+        <!-- Contact Form -->
+        <form action="submit_form.php" method="post" style="max-width: 600px; margin: 0 auto;">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
             
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;"></textarea>
             
-            <button type="submit">Send Message</button>
+            <button type="submit" style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">Send Message</button>
         </form>
         
-        
+        <!-- Contact Info Section -->
         <h3 style="margin-top: 60px; margin-bottom: 30px;">Contact Information</h3>
 
         <p>Location: Abu Dhabi</p>
         <p>Email: <a href="mailto:nouf@hotmail.com">nouf@hotmail.com</a></p>
         <p>Phone: 0501234567</p>
 
+        <!-- Business Hours Table -->
         <h3>Business Hours</h3>
-        <table>
+        <table style="margin: 20px auto; border-collapse: collapse; width: 80%; text-align: center;">
             <thead>
                 <tr>
                     <th>Day</th>
@@ -91,10 +94,10 @@
         </table>
     </section>
         
-    <footer>
-        <div class="footer-links">
+    <footer style="background-color: #f1f1f1; padding: 20px; text-align: center;">
+        <div class="footer-links" style="margin-bottom: 20px;">
             <h3>Quick Links</h3>
-            <ul>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px;">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog-post.html">Blog Posts</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -102,9 +105,9 @@
         </div>
         <p>&copy; All rights reserved to Nouf Mohammed</p>
 
-        <div class="footer-social">
+        <div class="footer-social" style="margin-top: 20px;">
             <h3>Social Media</h3>
-            <ul>
+            <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 10px;">
                 <li><a href="https://www.linkedin.com/in/nouf-mohamed-b93347ba/" target="_blank">LinkedIn</a></li>
                 <li><a href="https://github.com/NoufAlsaadi" target="_blank">Github</a></li>
             </ul>
