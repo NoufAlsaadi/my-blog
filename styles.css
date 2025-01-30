@@ -1,0 +1,378 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+header {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333; /* تحسين التباين */
+}
+
+header .logo {
+  max-height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* الروابط في النافبار */
+nav ul li a {
+  text-decoration: none;
+  color: #145dd2;
+  transition: color 0.3s ease;
+}
+
+/* تأثير التمرير (hover) للروابط في النافبار */
+nav ul li a:hover {
+  color: #b93434;
+}
+
+/* Blog post section */
+#home {
+  padding: 20px;
+}
+
+.blog-posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-item {
+  display: flex;
+  align-items: center; /* تعديل المحاذاة العمودية للصورة */
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  transition: transform 0.3s;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+}
+
+.post-image {
+  display: flex;
+  align-items: center; /* تمركز الصورة عموديًا */
+  justify-content: center; /* تمركز الصورة أفقيًا */
+}
+
+.post-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-description h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.post-description p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.read-more-btn {
+  padding: 10px 20px;
+  background-color: #145dd2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  color: #333; /* تحسين التباين */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-links, .footer-social {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.footer-links ul, .footer-social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-links ul li, .footer-social ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a, .footer-social ul li a {
+  text-decoration: none;
+  color: #145dd2;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover, .footer-social ul li a:hover {
+  color: #b93434;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .post-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .post-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .post-description h3 {
+    font-size: 18px;
+  }
+
+  .post-description p {
+    font-size: 14px;
+  }
+
+  .read-more-btn {
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  header, footer {
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* إضافات لتنسيق الصفحة الرئيسية (welcome section) */
+#welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e0f7fa;
+  text-align: left;
+}
+
+.welcome-content {
+  max-width: 600px;
+  margin-right: 20px;
+}
+
+.welcome-photo {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+/* Styles for blog posts grid */
+#blog-posts {
+  padding: 20px;
+}
+
+#blog-posts h2 {
+  text-align: center;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap; /* للسماح للمنشورات بالتنقل عند الشاشة الصغيرة */
+  justify-content: space-around;
+}
+
+.posts-container article {
+  border: 1px solid #5a4848;
+  padding: 10px;
+  margin: 10px;
+  flex: 1;
+  max-width: 30%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.posts-container img {
+  width: 100%; /* عرض الصور بنسبة 100% من العنصر الوالد */
+  max-width: 150px; /* تحديد الحد الأقصى لعرض الصورة */
+  height: auto; /* المحافظة على نسبة الأبعاد */
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* تحسين الجدول باللون الرصاصي */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #f2f2f2; /* اللون الرصاصي الفاتح للخلفية */
+}
+
+table, th, td {
+  border: 1px solid #ccc; /* حدود خفيفة باللون الرصاصي */
+}
+
+th {
+  background-color: #dcdcdc; /* لون خلفية العناوين باللون الرصاصي الفاتح */
+  color: #333; /* نص العناوين بلون داكن قليلاً */
+}
+
+td {
+  background-color: #f2f2f2; /* لون خلفية البيانات بلون رصاصي فاتح */
+}
+
+tr:nth-child(even) td {
+  background-color: #e0e0e0; /* تدرج اللون الرصاصي للصفوف الزوجية */
+}
+
+tr:hover {
+  background-color: #d6d6d6; /* تغيير اللون عند التمرير فوق الصف */
+}
+
+/* Main content styles */
+#main-content {
+  padding: 20px;
+  max-width: 800px; /* تحديد أقصى عرض للمحتوى */
+  margin: 0 auto; /* توسيط المحتوى في الصفحة */
+}
+
+#main-content h1 {
+  text-align: center; /* توسيط العنوان */
+  font-size: 28px; /* تحديد حجم الخط */
+  color: #333; /* تحديد اللون الداكن للعناوين */
+  margin-bottom: 20px; /* ترك مسافة أسفل العنوان */
+}
+
+#main-content p {
+  font-size: 18px; /* حجم الخط للفقرات */
+  color: #555; /* لون النص */
+  line-height: 1.6; /* تحسين التباعد بين الأسطر */
+  text-align: justify; /* توزيع النص بين الحواف */
+  margin-bottom: 20px; /* ترك مسافة أسفل الفقرة */
+}
+
+/* التنسيق العام للعناصر */
+h4 {
+  margin: 0;  /* إزالة الهوامش الافتراضية */
+  padding: 10px 0; /* إضافة بعض الحشو من الأعلى والأسفل */
+  font-weight: bold;
+}
+
+/* تنسيق الفقرات داخل العمود */
+.post-description p {
+  margin: 0;  /* إزالة الهوامش حول الفقرات */
+  padding: 5px 0;  /* إضافة بعض الحشو العلوي والسفلي بين الفقرات */
+  line-height: 1.6;  /* تحسين تباعد الأسطر */
+}
+
+/* تنسيق العمود الذي يحتوي على النصوص */
+#blog-posts {
+  padding: 20px;
+}
+
+.blog-posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.post-image {
+  flex: 1;
+}
+
+.post-description {
+  flex: 2;
+  padding-left: 10px; /* تحديد المسافة من الجهة اليسرى للنصوص */
+  text-align: left; /* محاذاة النصوص إلى اليسار */
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #145dd2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* تنسيق العنوان والفقرات داخل قسم #main-content */
+#main-content h1 {
+  text-align: center; /* توسيط العنوان */
+  font-size: 2em; /* حجم الخط */
+  margin-top: 50px; /* مسافة من الأعلى */
+  color: #333; /* لون العنوان */
+}
+
+#main-content p {
+  font-size: 1em; /* حجم الخط للفقرات */
+  line-height: 1.8; /* تحسين التباعد بين الأسطر */
+  margin: 20px auto; /* تحديد المسافة حول الفقرات */
+  width: 80%; /* عرض الفقرات بحيث لا تملأ الصفحة بالكامل */
+  text-align: justify; /* محاذاة النصوص بشكل مبرر */
+  color: #555; /* لون النص */
+}
