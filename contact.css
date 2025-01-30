@@ -1,0 +1,90 @@
+/* الجدول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  table-layout: fixed; /* تعيين الجدول ليعرض الخلايا بنسبة عرض ثابتة */
+  margin-left: auto; /* محاذاة الجدول إلى الوسط */
+  margin-right: auto; /* محاذاة الجدول إلى الوسط */
+}
+
+table, th, td {
+  border: 1px solid #f6e698;
+}
+
+th {
+  background-color: #f1d781;
+  color: #333; /* نص العناوين بلون داكن قليلاً */
+}
+
+td {
+  background-color: #fffdf4a9;
+  word-wrap: break-word; /* السماح بكسر الكلمات في الخلايا الطويلة */
+  text-align: left; /* محاذاة النص إلى اليسار */
+  padding: 6px;
+}
+
+tr:nth-child(even) td {
+  background-color: #f4ebba;
+}
+
+tr:hover {
+  background-color: #d6d6d6; /* تغيير اللون عند التمرير فوق الصف */
+}
+
+/* Media Queries لتصميم الجدول على الشاشات الكبيرة */
+@media (min-width: 1025px) {
+  table {
+    width: 80%; /* تقليل العرض على الشاشات الكبيرة */
+  }
+  table, th, td {
+    font-size: 16px; /* تكبير حجم الخط في الشاشات الكبيرة */
+  }
+}
+
+/* Media Queries لتصميم الجدول على الشاشات المتوسطة */
+@media (max-width: 1024px) {
+  table, th, td {
+    font-size: 14px; /* تقليل حجم الخط على الشاشات المتوسطة */
+  }
+}
+
+/* Media Queries لتصميم الجدول على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  table {
+    font-size: 12px; /* تقليل حجم الخط أكثر للشاشات الصغيرة */
+    overflow-x: auto; /* السماح بالتمرير الأفقي في حالة وجود صفوف كبيرة */
+  }
+
+  th, td {
+    padding: 8px; /* تقليل المسافات داخل الخلايا */
+  }
+
+  tr {
+    display: table-row; /* إبقاء الصفوف في شكل صفوف داخل الجدول */
+  }
+
+  td {
+    display: table-cell; /* تعيين الخلايا للظهور بشكل طبيعي */
+  }
+
+  td:before {
+    content: attr(data-label); /* إضافة تسميات البيانات على شكل قائمة */
+    font-weight: bold;
+    display: block;
+    text-align: left; /* محاذاة التسمية إلى اليسار */
+    margin-bottom: 5px; /* إضافة مسافة أسفل التسمية */
+  }
+}
+
+/* Media Query لشاشات الهواتف الصغيرة */
+@media (max-width: 480px) {
+  table {
+    font-size: 10px; /* تقليل حجم الخط في الشاشات الصغيرة جدًا */
+  }
+
+  td {
+    padding: 4px; /* تقليل الحشو داخل الخلايا */
+  }
+}

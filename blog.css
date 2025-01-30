@@ -1,0 +1,199 @@
+/* تحسين تنسيق المقالات */
+.blog-posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px; /* إضافة مسافة 20px من جميع الجهات (أعلى، أسفل، يمين، يسار) */
+}
+
+/* تنسيق كل عنصر مقال */
+.post-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  transition: transform 0.3s;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+}
+
+/* حاوية الصورة */
+.post-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto; /* منع التمدد أو التصغير الغير مرغوب فيه */
+}
+
+/* تحديد الأبعاد الثابتة للصور */
+.post-image img {
+  width: 150px; /* عرض ثابت */
+  height: 150px; /* ارتفاع ثابت */
+  object-fit: cover; /* تغطية المساحة المحددة بشكل صحيح */
+  border-radius: 8px;
+}
+
+.post-description {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left; /* تفعيل المحاذاة لليسار في الأجهزة الكبيرة */
+}
+
+.post-description h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.post-description p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #d85910;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+}
+
+.read-more-btn:hover {
+  background-color: #9c25b7;
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  width: 300px;
+}
+
+
+
+/* للأجهزة الصغيرة (الهاتف المحمول) */
+@media (max-width: 600px) {
+  .blog-posts-container {
+    gap: 15px;
+    margin: 10px; /* تقليل المسافة للأجهزة الصغيرة */
+  }
+
+  .post-item {
+    flex-direction: column; /* ترتيب المقالات بشكل عمودي */
+    gap: 15px;
+    align-items: center; /* توسيط العناصر داخل المقال */
+  }
+
+  .post-image {
+    margin-bottom: 10px; /* إضافة مسافة أسفل الصورة */
+  }
+
+  .post-image img {
+    width: 120px; /* تقليص حجم الصورة */
+    height: 120px;
+  }
+
+  .post-description {
+    text-align: center; /* توسيط النصوص */
+  }
+
+  .post-description h3 {
+    font-size: 18px; /* تقليص حجم العنوان */
+  }
+
+  .post-description p {
+    font-size: 14px; /* تقليص حجم النص */
+  }
+
+  /* توسيط زر "Go to Post" في الشاشات الصغيرة */
+  .read-more-btn {
+    width: 120px; /* تقليص عرض الزر */
+    margin-top: 10px;
+    margin-left: auto; /* توسيط الزر في الشاشات الصغيرة */
+    margin-right: auto;
+  }
+
+  h4 {
+    width: 100%; /* جعل العنوان يأخذ عرض الشاشة */
+  }
+}
+
+/* للأجهزة المتوسطة (الأجهزة اللوحية) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .blog-posts-container {
+    gap: 20px;
+    margin: 15px; /* ضبط المسافة للأجهزة المتوسطة */
+  }
+
+  .post-item {
+    flex-direction: row; /* ترتيب المقالات بشكل أفقي */
+  }
+
+  .post-image img {
+    width: 140px; /* تعديل حجم الصورة */
+    height: 140px;
+  }
+
+  .post-description h3 {
+    font-size: 19px;
+  }
+
+  .post-description p {
+    font-size: 15px;
+  }
+
+  .read-more-btn {
+    width: 130px;
+  }
+
+  h4 {
+    width: 250px; /* تعديل عرض العنوان */
+  }
+}
+
+/* للأجهزة الكبيرة (الشاشات الكبيرة) */
+@media (min-width: 1025px) {
+  .blog-posts-container {
+    margin: 20px; /* التأكد من تطبيق المسافة من جميع الجهات على الأجهزة الكبيرة أيضًا */
+  }
+
+  .post-item {
+    flex-direction: row; /* ترتيب المقالات بشكل أفقي */
+  }
+
+  .post-image img {
+    width: 150px; /* حجم الصورة الافتراضي */
+    height: 150px;
+  }
+
+  .post-description h3 {
+    font-size: 20px;
+  }
+
+  .post-description p {
+    font-size: 16px;
+  }
+
+  .read-more-btn {
+    width: 150px;
+  }
+
+  h4 {
+    width: 300px; /* عرض العنوان الافتراضي */
+  }
+}

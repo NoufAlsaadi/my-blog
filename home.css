@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;  /* التأكد من أن الصفحة تشغل كامل الارتفاع */
+}
+
+/* General layout adjustments */
+#welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e95f0966;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.welcome-content {
+  max-width: 100%; /* تأكد من أن المحتوى يأخذ العرض الكامل */
+  margin-right: 20px;
+}
+
+.welcome-photo {
+  max-width: 200px; /* الحد الأقصى للصورة */
+  width: 100%; /* الصورة تتناسب مع عرض الحاوية */
+  height: auto;
+  border-radius: 50%;
+}
+
+#blog-posts h2 {
+  text-align: center; /* محاذاة العنوان إلى المركز */
+  margin-bottom: 20px; /* إضافة مسافة أسفل العنوان */
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap; /* السماح للمنشورات بالانتقال لأسفل إذا لزم الأمر */
+  justify-content: space-around;
+  width: 100%; /* تأكد من أن الحاوية لا تتجاوز عرض الشاشة */    
+  padding: 0 20px; /* إضافة مسافة داخل الحاوية */
+}
+
+.posts-container article {
+  border: 1px solid #5a4848;
+  padding: 10px;
+  margin: 10px;
+  flex: 1 1 calc(33.33% - 20px); /* تضمن توزيع العناصر بشكل جيد */
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 100%; /* تأكد من أن المقالات لا تتجاوز عرض الشاشة */
+}
+
+.posts-container img {
+  width: 100%;
+  max-width: 120px; /* تحديد الحد الأقصى لعرض الصورة */
+  height: auto; /* الحفاظ على الأبعاد الصحيحة للصورة */
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #d85910;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+}
+
+.read-more-btn:hover {
+  background-color: #9c25b7;
+}
+
+/* Media Queries لتصميم الصفحة على الشاشات الصغيرة */
+@media (max-width: 1024px) {
+  .posts-container article {
+    flex: 1 1 calc(50% - 20px); /* عرض المنشورات بنسبة 50% على الشاشات متوسطة الحجم */
+  }
+
+  .welcome-content {
+    max-width: 500px;
+  }
+
+  .welcome-photo {
+    max-width: 150px; /* تقليص حجم الصورة */
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-container article {
+    flex: 1 1 100%; /* عرض المنشورات بنسبة 100% */
+    max-width: 100%;
+  }
+
+  .welcome-content {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .welcome-photo {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  #welcome {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .posts-container article {
+    padding: 5px;
+    margin: 5px 0;
+  }
+
+  .read-more-btn {
+    padding: 8px 15px;
+    width: auto; /* تعديل العرض ليكون مناسبًا على الشاشات الصغيرة */
+  }
+}
